@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-First Test
 </head>
 <body>
-  <audio class="audio" controls="controls" src="{{ audio_stream }}"></audio>
+  <audio class="audio" controls="controls" src="{{ audio }}" autoplay="true"></audio>
+  <br/>
+  <ul>
+    {% for video in links %}
+      <li>
+        <a href="{{ video['url'] }}">{{ video['title'] }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 </body>
 </html>
